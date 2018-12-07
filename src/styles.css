@@ -1,0 +1,194 @@
+body {
+  font-family: "Proxima Nova", sans-serif;
+  background: #e5e5e6;
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  outline: none;
+}
+
+[contentEditable="true"]:empty:not(:focus):before {
+  content: attr(data-text);
+  opacity: 0.2;
+}
+
+.wrapper {
+  display: flex;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  padding: 8px;
+}
+
+.name {
+  margin: 0px 0;
+  padding: 10px 0;
+  position: relative;
+  background: white;
+  border-radius: 8px;
+}
+
+.add-task {
+  color: #4b7cf3;
+  cursor: pointer;
+  margin: 0 0 20px 0;
+  background: white;
+  padding: 0 0 10px;
+}
+
+.name-sort {
+  position: absolute;
+  right: 10px;
+  color: #2dcd72;
+  cursor: pointer;
+}
+
+.add-task-text {
+  border-bottom: 1px solid #e3ebfb;
+}
+
+.column {
+  width: 50%;
+  text-align: center;
+  background: #f2f2f2;
+  border-radius: 8px;
+  margin: 0 20px 0 0;
+}
+
+.column:last-child {
+  margin: 0;
+}
+
+.board {
+  min-height: 400px;
+}
+
+.column.done task {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #00000017;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+modal.visible {
+  display: inline-flex;
+}
+
+modal .dialog {
+  background-color: white;
+  min-height: 200px;
+  min-width: 400px;
+  padding: 16px;
+}
+
+.dialog .btns {
+  display: inline-flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.btns button {
+  width: 120px;
+  height: 40px;
+  background-color: white;
+  font-size: 14px;
+  margin-left: 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.btns .cancel {
+  background-color: #dfdfdf;
+}
+
+.btns .cancel:hover {
+  background-color: #cccccc;
+}
+
+.btns .accept {
+  background-color: #28aefc;
+}
+
+.btns .accept:hover {
+  background-color: #239be0;
+}
+
+task {
+  background: white;
+  display: flex;
+  margin: 0 10px 20px 10px;
+  flex-direction: column;
+  text-align: left;
+  padding: 10px;
+}
+
+task .task-name,
+.dialog .task-name {
+  font-weight: 900;
+  font-size: 16px;
+  margin: 0 0 10px 0;
+}
+
+.dialog .task-name {
+  font-size: 34px;
+  margin-top: 20px;
+}
+
+task .task-description,
+.dialog .task-description {
+  font-size: 14px;
+  margin: 0 0 10px 0;
+}
+
+.dialog .task-description {
+  font-size: 28px;
+  margin-top: 20px;
+  max-width: 400px;
+}
+
+task .task-delete {
+  color: #ef5050;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0 10px 0 0;
+}
+
+task .task-move {
+  color: #bdb9b9;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+}
+
+.task-move ul {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-move ul li {
+  margin-top: 5px;
+}
+
+.task-move ul li:hover {
+  color: #888888;
+}
+
+task .task-move-drop {
+  position: absolute;
+  background: white;
+  padding: 10px 15px 10px 10px;
+  list-style-type: none;
+  left: 0;
+  top: 0;
+}

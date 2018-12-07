@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="wrapper">
+        <div class="column to-do">
+          <div class="name">
+            <span class="name-common">To Do</span>
+            <span class="name-sort" data-column="to-do">sort (A-я)</span>
+          </div>
+          <div class="add-task">
+            <span class="add-task-text" data-column="to-do"
+              >Добавить задачу</span
+            >
+          </div>
+          <div class="board">
+            <task>
+              <div
+                class="task-name"
+                contenteditable="true"
+                data-text="Название задачи"
+              >
+                Сделать всю работу
+              </div>
+              <div
+                class="task-description"
+                contenteditable="true"
+                data-text="Описание задачи"
+              >
+                Нужно пойти на работу и попробовать закончить начатое
+              </div>
+              <div class="task-options">
+                <span class="task-delete">Удалить</span>
+                <span class="task-move">
+                  <span>Переместить ↓</span>
+                  <ul class="task-move-drop" style="display: none;">
+                    <li>in-process</li>
+                    <li>done</li>
+                  </ul>
+                </span>
+              </div>
+            </task>
+            <task>
+              <div
+                class="task-name"
+                contenteditable="true"
+                data-text="Название задачи"
+              >
+                Арбузы
+              </div>
+              <div
+                class="task-description"
+                contenteditable="true"
+                data-text="Описание задачи"
+              >
+                Нужно купить арбузы
+              </div>
+              <div class="task-options">
+                <span class="task-delete">Удалить</span>
+                <span class="task-move">
+                  <span>Переместить ↓</span>
+                  <ul class="task-move-drop" style="display: none;">
+                    <li>in-process</li>
+                    <li>done</li>
+                  </ul>
+                </span>
+              </div>
+            </task>
+          </div>
+        </div>
+
+        <div class="column in-process">
+          <div class="name">
+            <span class="name-common">In process</span>
+            <span class="name-sort" data-column="in-process">sort (A-я)</span>
+          </div>
+          <div class="add-task">
+            <span class="add-task-text" data-column="in-process"
+              >Добавить задачу</span
+            >
+          </div>
+          <div class="board">
+            <task>
+              <div
+                class="task-name"
+                contenteditable="true"
+                data-text="Название задачи"
+              >
+                Сделать всю работу
+              </div>
+              <div
+                class="task-description"
+                contenteditable="true"
+                data-text="Описание задачи"
+              >
+                Нужно пойти на работу и попробовать закончить начатое
+              </div>
+              <div class="task-options">
+                <span class="task-delete">Удалить</span>
+                <span class="task-move">
+                  <span>Переместить ↓</span>
+                  <ul class="task-move-drop" style="display: none;">
+                    <li>to-do</li>
+                    <li>done</li>
+                  </ul>
+                </span>
+              </div>
+            </task>
+            <task>
+              <div
+                class="task-name"
+                contenteditable="true"
+                data-text="Название задачи"
+              >
+                Пойти играть
+              </div>
+              <div
+                class="task-description"
+                contenteditable="true"
+                data-text="Описание задачи"
+              >
+                Нужно пойти на работу и попробовать закончить начатое
+              </div>
+              <div class="task-options">
+                <span class="task-delete">Удалить</span>
+                <span class="task-move">
+                  <span>Переместить ↓</span>
+                  <ul class="task-move-drop" style="display: none;">
+                    <li>to-do</li>
+                    <li>done</li>
+                  </ul>
+                </span>
+              </div>
+            </task>
+            <task>
+              <div
+                class="task-name"
+                contenteditable="true"
+                data-text="Название задачи"
+              >
+                Поиграть в компуктер
+              </div>
+              <div
+                class="task-description"
+                contenteditable="true"
+                data-text="Описание задачи"
+              >
+                Нужно пойти на работу и попробовать закончить начатое
+              </div>
+              <div class="task-options">
+                <span class="task-delete">Удалить</span>
+                <span class="task-move">
+                  <span>Переместить ↓</span>
+                  <ul class="task-move-drop" style="display: none;">
+                    <li>to-do</li>
+                    <li>done</li>
+                  </ul>
+                </span>
+              </div>
+            </task>
+          </div>
+        </div>
+
+        <div class="column done">
+          <div class="name">Done</div>
+          <div class="add-task">
+            <span class="add-task-text" data-column="done"
+              >Добавить задачу</span
+            >
+          </div>
+          <div class="board"></div>
+        </div>
+      </div>
+      <modal>
+        <div class="dialog">
+          <div
+            class="task-name"
+            contenteditable="true"
+            data-text="Название задачи"
+          ></div>
+          <div
+            class="task-description"
+            contenteditable="true"
+            data-text="Описание задачи"
+          ></div>
+          <div class="btns">
+            <button class="cancel">Отменить</button>
+            <button class="accept">Добавить</button>
+          </div>
+        </div>
+      </modal>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
